@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AC01DBA1A8184B70081BD6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DB91A8184B70081BD6F /* AppDelegate.swift */; };
+		0AC01DBC1A8184B70081BD6F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DBB1A8184B70081BD6F /* MainViewController.swift */; };
+		0AC01DBF1A8184B70081BD6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC01DBD1A8184B70081BD6F /* Main.storyboard */; };
+		0AC01DC11A8184B70081BD6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC01DC01A8184B70081BD6F /* Images.xcassets */; };
+		0AC01DC41A8184B70081BD6F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC01DC21A8184B70081BD6F /* LaunchScreen.xib */; };
+		0AC01DD01A8184B70081BD6F /* FraternityRushBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DCF1A8184B70081BD6F /* FraternityRushBuddyTests.swift */; };
+		0AC01DDB1A8187090081BD6F /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DDA1A8187090081BD6F /* LeftViewController.swift */; };
+		0AC01DF31A8187DB0081BD6F /* CVCalendarContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DDE1A8187DB0081BD6F /* CVCalendarContentDelegate.swift */; };
+		0AC01DF41A8187DB0081BD6F /* CVCalendarContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DDF1A8187DB0081BD6F /* CVCalendarContentViewController.swift */; };
+		0AC01DF51A8187DB0081BD6F /* CVCalendarDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DE01A8187DB0081BD6F /* CVCalendarDayView.swift */; };
+		0AC01DF61A8187DB0081BD6F /* CVCalendarDayViewControlCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DE11A8187DB0081BD6F /* CVCalendarDayViewControlCoordinator.swift */; };
+		0AC01DF71A8187DB0081BD6F /* CVCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DE21A8187DB0081BD6F /* CVCalendarManager.swift */; };
+		0AC01DF81A8187DB0081BD6F /* CVCalendarMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DE31A8187DB0081BD6F /* CVCalendarMenuView.swift */; };
+		0AC01DF91A8187DB0081BD6F /* CVCalendarMonthContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DE41A8187DB0081BD6F /* CVCalendarMonthContentView.swift */; };
+		0AC01DFA1A8187DB0081BD6F /* CVCalendarMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DE51A8187DB0081BD6F /* CVCalendarMonthView.swift */; };
+		0AC01DFB1A8187DB0081BD6F /* CVCalendarRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DE61A8187DB0081BD6F /* CVCalendarRenderer.swift */; };
+		0AC01DFC1A8187DB0081BD6F /* CVCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DE71A8187DB0081BD6F /* CVCalendarView.swift */; };
+		0AC01DFD1A8187DB0081BD6F /* CVCalendarViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DE81A8187DB0081BD6F /* CVCalendarViewAnimator.swift */; };
+		0AC01DFE1A8187DB0081BD6F /* CVCalendarViewAnimatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DE91A8187DB0081BD6F /* CVCalendarViewAnimatorDelegate.swift */; };
+		0AC01DFF1A8187DB0081BD6F /* CVCalendarViewAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DEA1A8187DB0081BD6F /* CVCalendarViewAppearance.swift */; };
+		0AC01E001A8187DB0081BD6F /* CVCalendarViewAppearanceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DEB1A8187DB0081BD6F /* CVCalendarViewAppearanceDelegate.swift */; };
+		0AC01E011A8187DB0081BD6F /* CVCalendarViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DEC1A8187DB0081BD6F /* CVCalendarViewDelegate.swift */; };
+		0AC01E021A8187DB0081BD6F /* CVCalendarWeekContentRecovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DED1A8187DB0081BD6F /* CVCalendarWeekContentRecovery.swift */; };
+		0AC01E031A8187DB0081BD6F /* CVCalendarWeekContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DEE1A8187DB0081BD6F /* CVCalendarWeekContentView.swift */; };
+		0AC01E041A8187DB0081BD6F /* CVCalendarWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DEF1A8187DB0081BD6F /* CVCalendarWeekView.swift */; };
+		0AC01E051A8187DB0081BD6F /* CVCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DF01A8187DB0081BD6F /* CVCircleView.swift */; };
+		0AC01E061A8187DB0081BD6F /* CVDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DF11A8187DB0081BD6F /* CVDate.swift */; };
+		0AC01E071A8187DB0081BD6F /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01DF21A8187DB0081BD6F /* SlideMenuController.swift */; };
+		0AC01E091A8189CF0081BD6F /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01E081A8189CF0081BD6F /* ScheduleViewController.swift */; };
+		0AC01E0B1A8189DD0081BD6F /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01E0A1A8189DD0081BD6F /* NewsViewController.swift */; };
+		0AC01E0D1A8189EC0081BD6F /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01E0C1A8189EC0081BD6F /* ContactViewController.swift */; };
+		0AC01E0F1A818A740081BD6F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01E0E1A818A740081BD6F /* SettingsViewController.swift */; };
+		0AC01E111A818B360081BD6F /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01E101A818B360081BD6F /* BaseTableViewCell.swift */; };
+		0AC01E131A818D300081BD6F /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01E121A818D300081BD6F /* RightViewController.swift */; };
+		0AC01E151A818DE20081BD6F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01E141A818DE20081BD6F /* StringExtension.swift */; };
+		0AC01E181A818E270081BD6F /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01E171A818E270081BD6F /* UITableViewExtension.swift */; };
+		0AC01E1A1A818E470081BD6F /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01E191A818E470081BD6F /* UIViewControllerExtension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0AC01DCA1A8184B70081BD6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AC01DAC1A8184B70081BD6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AC01DB31A8184B70081BD6F;
+			remoteInfo = FraternityRushBuddy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AC01DB41A8184B70081BD6F /* FraternityRushBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FraternityRushBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AC01DB81A8184B70081BD6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AC01DB91A8184B70081BD6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0AC01DBB1A8184B70081BD6F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0AC01DBE1A8184B70081BD6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0AC01DC01A8184B70081BD6F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0AC01DC31A8184B70081BD6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		0AC01DC91A8184B70081BD6F /* FraternityRushBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FraternityRushBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AC01DCE1A8184B70081BD6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AC01DCF1A8184B70081BD6F /* FraternityRushBuddyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FraternityRushBuddyTests.swift; sourceTree = "<group>"; };
+		0AC01DDA1A8187090081BD6F /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		0AC01DDE1A8187DB0081BD6F /* CVCalendarContentDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarContentDelegate.swift; sourceTree = "<group>"; };
+		0AC01DDF1A8187DB0081BD6F /* CVCalendarContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarContentViewController.swift; sourceTree = "<group>"; };
+		0AC01DE01A8187DB0081BD6F /* CVCalendarDayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarDayView.swift; sourceTree = "<group>"; };
+		0AC01DE11A8187DB0081BD6F /* CVCalendarDayViewControlCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarDayViewControlCoordinator.swift; sourceTree = "<group>"; };
+		0AC01DE21A8187DB0081BD6F /* CVCalendarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarManager.swift; sourceTree = "<group>"; };
+		0AC01DE31A8187DB0081BD6F /* CVCalendarMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarMenuView.swift; sourceTree = "<group>"; };
+		0AC01DE41A8187DB0081BD6F /* CVCalendarMonthContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarMonthContentView.swift; sourceTree = "<group>"; };
+		0AC01DE51A8187DB0081BD6F /* CVCalendarMonthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarMonthView.swift; sourceTree = "<group>"; };
+		0AC01DE61A8187DB0081BD6F /* CVCalendarRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarRenderer.swift; sourceTree = "<group>"; };
+		0AC01DE71A8187DB0081BD6F /* CVCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarView.swift; sourceTree = "<group>"; };
+		0AC01DE81A8187DB0081BD6F /* CVCalendarViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarViewAnimator.swift; sourceTree = "<group>"; };
+		0AC01DE91A8187DB0081BD6F /* CVCalendarViewAnimatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarViewAnimatorDelegate.swift; sourceTree = "<group>"; };
+		0AC01DEA1A8187DB0081BD6F /* CVCalendarViewAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarViewAppearance.swift; sourceTree = "<group>"; };
+		0AC01DEB1A8187DB0081BD6F /* CVCalendarViewAppearanceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarViewAppearanceDelegate.swift; sourceTree = "<group>"; };
+		0AC01DEC1A8187DB0081BD6F /* CVCalendarViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarViewDelegate.swift; sourceTree = "<group>"; };
+		0AC01DED1A8187DB0081BD6F /* CVCalendarWeekContentRecovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarWeekContentRecovery.swift; sourceTree = "<group>"; };
+		0AC01DEE1A8187DB0081BD6F /* CVCalendarWeekContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarWeekContentView.swift; sourceTree = "<group>"; };
+		0AC01DEF1A8187DB0081BD6F /* CVCalendarWeekView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCalendarWeekView.swift; sourceTree = "<group>"; };
+		0AC01DF01A8187DB0081BD6F /* CVCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCircleView.swift; sourceTree = "<group>"; };
+		0AC01DF11A8187DB0081BD6F /* CVDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVDate.swift; sourceTree = "<group>"; };
+		0AC01DF21A8187DB0081BD6F /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
+		0AC01E081A8189CF0081BD6F /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		0AC01E0A1A8189DD0081BD6F /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		0AC01E0C1A8189EC0081BD6F /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		0AC01E0E1A818A740081BD6F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0AC01E101A818B360081BD6F /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		0AC01E121A818D300081BD6F /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
+		0AC01E141A818DE20081BD6F /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = ../StringExtension.swift; sourceTree = "<group>"; };
+		0AC01E171A818E270081BD6F /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		0AC01E191A818E470081BD6F /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0AC01DB11A8184B70081BD6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AC01DC61A8184B70081BD6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AC01DAB1A8184B70081BD6F = {
+			isa = PBXGroup;
+			children = (
+				0AC01DDC1A8187DB0081BD6F /* Source */,
+				0AC01DB61A8184B70081BD6F /* FraternityRushBuddy */,
+				0AC01DCC1A8184B70081BD6F /* FraternityRushBuddyTests */,
+				0AC01DB51A8184B70081BD6F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0AC01DB51A8184B70081BD6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AC01DB41A8184B70081BD6F /* FraternityRushBuddy.app */,
+				0AC01DC91A8184B70081BD6F /* FraternityRushBuddyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AC01DB61A8184B70081BD6F /* FraternityRushBuddy */ = {
+			isa = PBXGroup;
+			children = (
+				0AC01E161A818E160081BD6F /* Extensions */,
+				0AC01DB91A8184B70081BD6F /* AppDelegate.swift */,
+				0AC01DD91A8186A40081BD6F /* ViewControllers */,
+				0AC01E101A818B360081BD6F /* BaseTableViewCell.swift */,
+				0AC01DC01A8184B70081BD6F /* Images.xcassets */,
+				0AC01DC21A8184B70081BD6F /* LaunchScreen.xib */,
+				0AC01DB71A8184B70081BD6F /* Supporting Files */,
+			);
+			path = FraternityRushBuddy;
+			sourceTree = "<group>";
+		};
+		0AC01DB71A8184B70081BD6F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AC01DB81A8184B70081BD6F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0AC01DCC1A8184B70081BD6F /* FraternityRushBuddyTests */ = {
+			isa = PBXGroup;
+			children = (
+				0AC01DCF1A8184B70081BD6F /* FraternityRushBuddyTests.swift */,
+				0AC01DCD1A8184B70081BD6F /* Supporting Files */,
+			);
+			path = FraternityRushBuddyTests;
+			sourceTree = "<group>";
+		};
+		0AC01DCD1A8184B70081BD6F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AC01DCE1A8184B70081BD6F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0AC01DD91A8186A40081BD6F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0AC01DBB1A8184B70081BD6F /* MainViewController.swift */,
+				0AC01E0E1A818A740081BD6F /* SettingsViewController.swift */,
+				0AC01DDA1A8187090081BD6F /* LeftViewController.swift */,
+				0AC01E121A818D300081BD6F /* RightViewController.swift */,
+				0AC01E081A8189CF0081BD6F /* ScheduleViewController.swift */,
+				0AC01E0A1A8189DD0081BD6F /* NewsViewController.swift */,
+				0AC01E0C1A8189EC0081BD6F /* ContactViewController.swift */,
+				0AC01DBD1A8184B70081BD6F /* Main.storyboard */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0AC01DDC1A8187DB0081BD6F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0AC01DDD1A8187DB0081BD6F /* CVCalendar */,
+				0AC01DF21A8187DB0081BD6F /* SlideMenuController.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		0AC01DDD1A8187DB0081BD6F /* CVCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				0AC01DDE1A8187DB0081BD6F /* CVCalendarContentDelegate.swift */,
+				0AC01DDF1A8187DB0081BD6F /* CVCalendarContentViewController.swift */,
+				0AC01DE01A8187DB0081BD6F /* CVCalendarDayView.swift */,
+				0AC01DE11A8187DB0081BD6F /* CVCalendarDayViewControlCoordinator.swift */,
+				0AC01DE21A8187DB0081BD6F /* CVCalendarManager.swift */,
+				0AC01DE31A8187DB0081BD6F /* CVCalendarMenuView.swift */,
+				0AC01DE41A8187DB0081BD6F /* CVCalendarMonthContentView.swift */,
+				0AC01DE51A8187DB0081BD6F /* CVCalendarMonthView.swift */,
+				0AC01DE61A8187DB0081BD6F /* CVCalendarRenderer.swift */,
+				0AC01DE71A8187DB0081BD6F /* CVCalendarView.swift */,
+				0AC01DE81A8187DB0081BD6F /* CVCalendarViewAnimator.swift */,
+				0AC01DE91A8187DB0081BD6F /* CVCalendarViewAnimatorDelegate.swift */,
+				0AC01DEA1A8187DB0081BD6F /* CVCalendarViewAppearance.swift */,
+				0AC01DEB1A8187DB0081BD6F /* CVCalendarViewAppearanceDelegate.swift */,
+				0AC01DEC1A8187DB0081BD6F /* CVCalendarViewDelegate.swift */,
+				0AC01DED1A8187DB0081BD6F /* CVCalendarWeekContentRecovery.swift */,
+				0AC01DEE1A8187DB0081BD6F /* CVCalendarWeekContentView.swift */,
+				0AC01DEF1A8187DB0081BD6F /* CVCalendarWeekView.swift */,
+				0AC01DF01A8187DB0081BD6F /* CVCircleView.swift */,
+				0AC01DF11A8187DB0081BD6F /* CVDate.swift */,
+			);
+			path = CVCalendar;
+			sourceTree = "<group>";
+		};
+		0AC01E161A818E160081BD6F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0AC01E141A818DE20081BD6F /* StringExtension.swift */,
+				0AC01E171A818E270081BD6F /* UITableViewExtension.swift */,
+				0AC01E191A818E470081BD6F /* UIViewControllerExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0AC01DB31A8184B70081BD6F /* FraternityRushBuddy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AC01DD31A8184B70081BD6F /* Build configuration list for PBXNativeTarget "FraternityRushBuddy" */;
+			buildPhases = (
+				0AC01DB01A8184B70081BD6F /* Sources */,
+				0AC01DB11A8184B70081BD6F /* Frameworks */,
+				0AC01DB21A8184B70081BD6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FraternityRushBuddy;
+			productName = FraternityRushBuddy;
+			productReference = 0AC01DB41A8184B70081BD6F /* FraternityRushBuddy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0AC01DC81A8184B70081BD6F /* FraternityRushBuddyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AC01DD61A8184B70081BD6F /* Build configuration list for PBXNativeTarget "FraternityRushBuddyTests" */;
+			buildPhases = (
+				0AC01DC51A8184B70081BD6F /* Sources */,
+				0AC01DC61A8184B70081BD6F /* Frameworks */,
+				0AC01DC71A8184B70081BD6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AC01DCB1A8184B70081BD6F /* PBXTargetDependency */,
+			);
+			name = FraternityRushBuddyTests;
+			productName = FraternityRushBuddyTests;
+			productReference = 0AC01DC91A8184B70081BD6F /* FraternityRushBuddyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0AC01DAC1A8184B70081BD6F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Rose-Hulman";
+				TargetAttributes = {
+					0AC01DB31A8184B70081BD6F = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					0AC01DC81A8184B70081BD6F = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 0AC01DB31A8184B70081BD6F;
+					};
+				};
+			};
+			buildConfigurationList = 0AC01DAF1A8184B70081BD6F /* Build configuration list for PBXProject "FraternityRushBuddy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0AC01DAB1A8184B70081BD6F;
+			productRefGroup = 0AC01DB51A8184B70081BD6F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0AC01DB31A8184B70081BD6F /* FraternityRushBuddy */,
+				0AC01DC81A8184B70081BD6F /* FraternityRushBuddyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0AC01DB21A8184B70081BD6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AC01DBF1A8184B70081BD6F /* Main.storyboard in Resources */,
+				0AC01DC41A8184B70081BD6F /* LaunchScreen.xib in Resources */,
+				0AC01DC11A8184B70081BD6F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AC01DC71A8184B70081BD6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0AC01DB01A8184B70081BD6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AC01DF71A8187DB0081BD6F /* CVCalendarManager.swift in Sources */,
+				0AC01E151A818DE20081BD6F /* StringExtension.swift in Sources */,
+				0AC01E001A8187DB0081BD6F /* CVCalendarViewAppearanceDelegate.swift in Sources */,
+				0AC01E061A8187DB0081BD6F /* CVDate.swift in Sources */,
+				0AC01DDB1A8187090081BD6F /* LeftViewController.swift in Sources */,
+				0AC01E051A8187DB0081BD6F /* CVCircleView.swift in Sources */,
+				0AC01E111A818B360081BD6F /* BaseTableViewCell.swift in Sources */,
+				0AC01E0D1A8189EC0081BD6F /* ContactViewController.swift in Sources */,
+				0AC01DF41A8187DB0081BD6F /* CVCalendarContentViewController.swift in Sources */,
+				0AC01DBC1A8184B70081BD6F /* MainViewController.swift in Sources */,
+				0AC01DF81A8187DB0081BD6F /* CVCalendarMenuView.swift in Sources */,
+				0AC01DFB1A8187DB0081BD6F /* CVCalendarRenderer.swift in Sources */,
+				0AC01E031A8187DB0081BD6F /* CVCalendarWeekContentView.swift in Sources */,
+				0AC01DBA1A8184B70081BD6F /* AppDelegate.swift in Sources */,
+				0AC01DFF1A8187DB0081BD6F /* CVCalendarViewAppearance.swift in Sources */,
+				0AC01DF91A8187DB0081BD6F /* CVCalendarMonthContentView.swift in Sources */,
+				0AC01E011A8187DB0081BD6F /* CVCalendarViewDelegate.swift in Sources */,
+				0AC01DF61A8187DB0081BD6F /* CVCalendarDayViewControlCoordinator.swift in Sources */,
+				0AC01E131A818D300081BD6F /* RightViewController.swift in Sources */,
+				0AC01E181A818E270081BD6F /* UITableViewExtension.swift in Sources */,
+				0AC01E1A1A818E470081BD6F /* UIViewControllerExtension.swift in Sources */,
+				0AC01E091A8189CF0081BD6F /* ScheduleViewController.swift in Sources */,
+				0AC01DFE1A8187DB0081BD6F /* CVCalendarViewAnimatorDelegate.swift in Sources */,
+				0AC01DFA1A8187DB0081BD6F /* CVCalendarMonthView.swift in Sources */,
+				0AC01DF51A8187DB0081BD6F /* CVCalendarDayView.swift in Sources */,
+				0AC01E0B1A8189DD0081BD6F /* NewsViewController.swift in Sources */,
+				0AC01DFC1A8187DB0081BD6F /* CVCalendarView.swift in Sources */,
+				0AC01DFD1A8187DB0081BD6F /* CVCalendarViewAnimator.swift in Sources */,
+				0AC01E0F1A818A740081BD6F /* SettingsViewController.swift in Sources */,
+				0AC01DF31A8187DB0081BD6F /* CVCalendarContentDelegate.swift in Sources */,
+				0AC01E041A8187DB0081BD6F /* CVCalendarWeekView.swift in Sources */,
+				0AC01E071A8187DB0081BD6F /* SlideMenuController.swift in Sources */,
+				0AC01E021A8187DB0081BD6F /* CVCalendarWeekContentRecovery.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AC01DC51A8184B70081BD6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AC01DD01A8184B70081BD6F /* FraternityRushBuddyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0AC01DCB1A8184B70081BD6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AC01DB31A8184B70081BD6F /* FraternityRushBuddy */;
+			targetProxy = 0AC01DCA1A8184B70081BD6F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0AC01DBD1A8184B70081BD6F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AC01DBE1A8184B70081BD6F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0AC01DC21A8184B70081BD6F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AC01DC31A8184B70081BD6F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0AC01DD11A8184B70081BD6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0AC01DD21A8184B70081BD6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0AC01DD41A8184B70081BD6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FraternityRushBuddy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0AC01DD51A8184B70081BD6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FraternityRushBuddy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0AC01DD71A8184B70081BD6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FraternityRushBuddyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FraternityRushBuddy.app/FraternityRushBuddy";
+			};
+			name = Debug;
+		};
+		0AC01DD81A8184B70081BD6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FraternityRushBuddyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FraternityRushBuddy.app/FraternityRushBuddy";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AC01DAF1A8184B70081BD6F /* Build configuration list for PBXProject "FraternityRushBuddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AC01DD11A8184B70081BD6F /* Debug */,
+				0AC01DD21A8184B70081BD6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AC01DD31A8184B70081BD6F /* Build configuration list for PBXNativeTarget "FraternityRushBuddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AC01DD41A8184B70081BD6F /* Debug */,
+				0AC01DD51A8184B70081BD6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0AC01DD61A8184B70081BD6F /* Build configuration list for PBXNativeTarget "FraternityRushBuddyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AC01DD71A8184B70081BD6F /* Debug */,
+				0AC01DD81A8184B70081BD6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0AC01DAC1A8184B70081BD6F /* Project object */;
+}
