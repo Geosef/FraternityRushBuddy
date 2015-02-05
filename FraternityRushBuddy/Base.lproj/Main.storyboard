@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -55,6 +56,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tbz-oc-yJa">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="YHx-Tr-dMG" id="v7r-tl-5NR"/>
+                                    <outlet property="delegate" destination="YHx-Tr-dMG" id="GLO-Tt-chE"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -84,12 +89,82 @@
                     <view key="view" contentMode="scaleToFill" id="x7g-3n-EpJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZs-Ji-Hef">
+                                <rect key="frame" x="551" y="20" width="33" height="33"/>
+                                <state key="normal" image="present-100">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="todayMonthView" destination="yZt-e4-f5h" eventType="touchUpInside" id="yyG-i4-Pci"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3L-uh-ou5" customClass="CVCalendarMenuView" customModule="FraternityRushBuddy" customModuleProvider="target">
+                                <rect key="frame" x="16" y="56" width="568" height="32"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Y7Z-Kf-ce9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uix-Fj-gtd" customClass="CVCalendarView" customModule="FraternityRushBuddy" customModuleProvider="target">
+                                <rect key="frame" x="16" y="96" width="568" height="457"/>
+                                <color key="backgroundColor" red="0.47058823529999999" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="calendarDelegate" destination="yZt-e4-f5h" id="MiC-G5-Fk6"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable showing days out" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0h-tm-XrF">
+                                <rect key="frame" x="16" y="568" width="221" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MFo-CL-G1l">
+                                <rect key="frame" x="535" y="561" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="Ptf-tI-Pw4"/>
+                                    <constraint firstAttribute="height" constant="31" id="z9W-G6-5cg"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="switchChanged:" destination="yZt-e4-f5h" eventType="valueChanged" id="ney-XT-gHX"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="January, 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5OP-RP-cco">
+                                <rect key="frame" x="237" y="20" width="127" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="S3L-uh-ou5" firstAttribute="top" secondItem="SZs-Ji-Hef" secondAttribute="bottom" constant="3" id="8vw-NJ-tgt"/>
+                            <constraint firstAttribute="centerX" secondItem="5OP-RP-cco" secondAttribute="centerX" id="9Ny-9l-gQ0"/>
+                            <constraint firstItem="SZs-Ji-Hef" firstAttribute="top" secondItem="Tss-Vp-ryp" secondAttribute="bottom" id="ALE-Oi-SqE"/>
+                            <constraint firstItem="MFo-CL-G1l" firstAttribute="trailing" secondItem="x7g-3n-EpJ" secondAttribute="trailingMargin" id="FNh-2u-jLj"/>
+                            <constraint firstItem="k0h-tm-XrF" firstAttribute="leading" secondItem="x7g-3n-EpJ" secondAttribute="leadingMargin" id="ROJ-9M-ste"/>
+                            <constraint firstItem="aei-Bx-Zdt" firstAttribute="top" secondItem="MFo-CL-G1l" secondAttribute="bottom" constant="8" id="Wud-Wz-t22"/>
+                            <constraint firstItem="SZs-Ji-Hef" firstAttribute="trailing" secondItem="x7g-3n-EpJ" secondAttribute="trailingMargin" id="X3z-zj-emh"/>
+                            <constraint firstItem="uix-Fj-gtd" firstAttribute="leading" secondItem="x7g-3n-EpJ" secondAttribute="leadingMargin" id="fKN-3t-E8z"/>
+                            <constraint firstItem="5OP-RP-cco" firstAttribute="top" secondItem="Tss-Vp-ryp" secondAttribute="bottom" id="fVu-Mu-qqF"/>
+                            <constraint firstItem="uix-Fj-gtd" firstAttribute="trailing" secondItem="x7g-3n-EpJ" secondAttribute="trailingMargin" id="gPB-9b-Xay"/>
+                            <constraint firstItem="MFo-CL-G1l" firstAttribute="top" secondItem="uix-Fj-gtd" secondAttribute="bottom" constant="8" id="hJf-cm-gkF"/>
+                            <constraint firstItem="S3L-uh-ou5" firstAttribute="trailing" secondItem="x7g-3n-EpJ" secondAttribute="trailingMargin" id="lGl-XS-hXL"/>
+                            <constraint firstItem="aei-Bx-Zdt" firstAttribute="top" secondItem="k0h-tm-XrF" secondAttribute="bottom" constant="8" id="sUH-kf-nwu"/>
+                            <constraint firstItem="uix-Fj-gtd" firstAttribute="top" secondItem="S3L-uh-ou5" secondAttribute="bottom" constant="8" id="xlE-bZ-76N"/>
+                            <constraint firstItem="S3L-uh-ou5" firstAttribute="leading" secondItem="x7g-3n-EpJ" secondAttribute="leadingMargin" id="ybY-Ab-hao"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calendarView" destination="uix-Fj-gtd" id="EAb-WV-0Jp"/>
+                        <outlet property="daysOutSwitch" destination="MFo-CL-G1l" id="9Dj-ER-JcI"/>
+                        <outlet property="menuView" destination="S3L-uh-ou5" id="p7G-SL-lxF"/>
+                        <outlet property="monthLabel" destination="5OP-RP-cco" id="PZA-9B-MWw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s3n-J7-0AL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="284" y="2171"/>
+            <point key="canvasLocation" x="300" y="2171"/>
         </scene>
         <!--News View Controller-->
         <scene sceneID="3Pj-XP-SVr">
@@ -146,4 +221,7 @@
             <point key="canvasLocation" x="284" y="4162"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="present-100" width="33" height="33"/>
+    </resources>
 </document>
