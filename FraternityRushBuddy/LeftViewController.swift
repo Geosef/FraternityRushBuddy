@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 enum LeftMenu: Int {
     case Main = 0
@@ -14,6 +15,10 @@ enum LeftMenu: Int {
     case News
     case Contact
     case Settings
+    case Twitter
+    case Facebook
+    case Instagram
+    case Pike
 }
 
 protocol LeftMenuProtocol : class {
@@ -26,7 +31,7 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var menus = ["Main", "Schedule", "News", "Contact", "Settings"]
+    var menus = ["ΠKA", "Schedule", "News", "Contact", "Settings", "Twitter", "Facebook", "Instagram", "Pike Website"]
     var mainViewController: UIViewController!
     var scheduleViewController: UIViewController!
     var newsViewController: UIViewController!
@@ -72,9 +77,9 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: BaseTableViewCell = BaseTableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: BaseTableViewCell.identifier)
-        cell.backgroundColor = UIColor(red: 64/255, green: 170/255, blue: 239/255, alpha: 1.0)
+        //cell.backgroundColor = UIColor(red: 64/255, green: 170/255, blue: 239/255, alpha: 1.0)
         cell.textLabel?.font = UIFont.italicSystemFontOfSize(18)
-        cell.textLabel?.textColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        //cell.textLabel?.textColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
         cell.textLabel?.text = menus[indexPath.row]
         return cell
     }
@@ -96,14 +101,31 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
             self.slideMenuController()?.changeMainViewController(self.newsViewController, close: true)
             break
         case .Contact:
-            self.slideMenuController()?.changeMainViewController(self.contactViewController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.contactViewController, close: true)            
             break
         case .Settings:
             self.slideMenuController()?.changeMainViewController(self.settingsViewController, close: true)
             break
+        case .Twitter:
+            UIApplication.sharedApplication().openURL(NSURL(string:"http://www.twitter.com/IotaDeltaPikes")!)
+            break
+        case .Facebook:
+            UIApplication.sharedApplication().openURL(NSURL(string:"http://www.facebook.com/Pi.Kappa.Alpha.Iota.Delta")!)
+            break
+        case .Instagram:
+            UIApplication.sharedApplication().openURL(NSURL(string:"http://www.instagram.com/iotadeltapikes")!)
+            break
+        case .Pike:
+            UIApplication.sharedApplication().openURL(NSURL(string:"http://www.pi-kappa-alpha.net/")!)
+            break
         default:
             break
         }
+    }
+    
+    // MARK: MFMailComposeViewControllerDelegate Method
+    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
     }
     
 }

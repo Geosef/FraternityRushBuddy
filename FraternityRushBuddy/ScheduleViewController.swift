@@ -7,49 +7,92 @@
 //
 
 import UIKit
+import EventKit
 
 class ScheduleViewController: UIViewController, CVCalendarViewDelegate {
     
     @IBOutlet weak var calendarView: CVCalendarView!
     @IBOutlet weak var menuView: CVCalendarMenuView!
     @IBOutlet weak var monthLabel: UILabel!
-    @IBOutlet weak var daysOutSwitch: UISwitch!
-    
     var shouldShowDaysOut = true
     var animationFinished = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.monthLabel.text = CVDate(date: NSDate()).description()
+        
+        // 1
+        let eventStore = EKEventStore()
+        
+        // 2
+        switch EKEventStore.authorizationStatusForEntityType(EKEntityTypeEvent) {
+        case .Authorized:
+            insertEvent(eventStore)
+        case .Denied:
+            println("Access denied")
+        case .NotDetermined:
+            // 3
+            eventStore.requestAccessToEntityType(EKEntityTypeEvent, completion:
+                {[weak self] (granted: Bool, error: NSError!) -> Void in
+                    if granted {
+                        self!.insertEvent(eventStore)
+                    } else {
+                        println("Access denied")
+                    }
+            })
+        default:
+            println("Case Default")
+        }
+    }
+    
+    func insertEvent(store: EKEventStore) {
+        // 1
+        let calendars = store.calendarsForEntityType(EKEntityTypeEvent)
+            as [EKCalendar]
+        
+        for calendar in calendars {
+            // 2
+            if calendar.title == "testcal" {
+                // 3
+                let startDate = NSDate()
+                // 2 hours
+                let endDate = startDate.dateByAddingTimeInterval(2 * 60 * 60)
+                
+                // 4
+                // Create Event
+                var event = EKEvent(eventStore: store)
+                event.calendar = calendar
+                
+                event.title = "New Meeting"
+                event.startDate = startDate
+                event.endDate = endDate
+                
+                // 5
+                // Save Event in Calendar
+                var error: NSError?
+                let result = store.saveEvent(event, span: EKSpanThisEvent, error: &error)
+                
+                if result == false {
+                    if let theError = error {
+                        println("An error occured \(theError)")
+                    }
+                }
+            }
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
         self.calendarView.commitCalendarViewUpdate()
+        self.calendarView!.changeDaysOutShowingState(false)
+        self.shouldShowDaysOut = true
         self.menuView.commitMenuViewUpdate()
         self.setNavigationBarItem()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    // MARK: - IB Actions
-    
-    @IBAction func switchChanged(sender: UISwitch) {
-        if sender.on {
-            self.calendarView!.changeDaysOutShowingState(false)
-            self.shouldShowDaysOut = true
-        } else {
-            self.calendarView!.changeDaysOutShowingState(true)
-            self.shouldShowDaysOut = false
-        }
-    }
-    
-    @IBAction func todayMonthView() {
-        self.calendarView.toggleTodayMonthView()
     }
     
     // MARK: Calendar View Delegate
@@ -62,8 +105,8 @@ class ScheduleViewController: UIViewController, CVCalendarViewDelegate {
         // TODO:
     }
     
-    func dotMarker(colorOnDayView dayView: CVCalendarDayView) -> UIColor {
-        if dayView.date?.day == 3 {
+    func dotMarker(colorOnDayView dayView: CVCalendarDayView) -> UIColor { 
+        if dayView.date?.week == 3 {
             return .redColor()
         } else if dayView.date?.day == 5 {
             return .blackColor()
